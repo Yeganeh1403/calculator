@@ -23,7 +23,7 @@ class App extends React.Component {
 
     handleEqual = () => {
         if (this.state.operator) {
-            const acc = eval(`${this.state.accumulator} ${this.state.operator} ${Number(this.state.current)}`);
+            const acc = eval(`${this.state.accumulator} ${this.state.operator} ${Number(this.state.current)}`).toFixed(8);
             this.setState({
                 accumulator: acc,
                 operator: "",
